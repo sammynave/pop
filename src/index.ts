@@ -4,7 +4,6 @@ export class PopSection extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: 'closed' });
     shadowRoot.innerHTML = `
           <style>
-              :host { display: inline-block; width: 5rem; height: 1rem; }
               .wrapper {
                 perspective: 25em;
               }
@@ -30,8 +29,8 @@ export class PopSection extends HTMLElement {
                 position: absolute;
               }
           </style>
-          <div local-class="wrapper">
-            <div local-class="polygon">
+          <div class="wrapper">
+            <div class="polygon">
               <slot name="header"></slot>
               <slot name="body"></slot>
             </div>
